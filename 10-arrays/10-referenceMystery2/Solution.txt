@@ -1,0 +1,38 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/arrays/referenceMystery2
+
+The following program produces 4 lines of output. 
+Write each line of output below as it would appear on the console.
+
+public class ReferenceMystery2 extends ConsoleProgram {
+    public void run() {
+        int x = 1;
+        int[] a = new int[4];
+​
+        x = x * 2;
+        mystery(x, a);
+        println(x + " " + Arrays.toString(a));
+​
+        x = x * 2;
+        mystery(x, a);
+        println(x + " " + Arrays.toString(a));
+    }
+​
+    public void mystery(int x, int[] a) {
+        x = x * 2;
+​
+        if (x > 6) {
+            a[2] = 14;
+            a[1] = 9;
+        } else {
+            a[0] = 9;
+            a[3] = 14;
+        }
+​
+        println(x + " " + Arrays.toString(a));
+    }
+}
+
+line 1: 		4 [9, 0, 0, 14]
+line 2: 		2 [9, 0, 0, 14]
+line 3: 		8 [9, 9, 14, 14]
+line 4:			4 [9, 9, 14, 14]

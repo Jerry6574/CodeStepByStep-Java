@@ -1,0 +1,24 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/collections/map/collectionMystery1
+
+Write the output that is printed when the given method below is passed 
+each of the following maps as its parameter. 
+Recall that maps print in a key=value format. 
+Your answer should display the right keys and values in the order they are added to the result map.
+
+public void collectionMystery1(HashMap<String, String> map) {
+    HashMap<String, String> result = new HashMap<String, String>();
+    for (String k : map.keySet()) {
+        String v = map.get(k);
+        if (k.charAt(0) <= v.charAt(0)) {
+            result.put(k, v);
+        } else {
+            result.put(v, k);
+        }
+    }
+    println(result);
+}
+
+{two=deux, five=cinq, one=un, three=trois, four=quatre}								{deux=two, cinq=five, one=un, three=trois, four=quatre}
+{skate=board, drive=car, program=computer, play=computer}							{board=skate, car=drive, computer=play}
+{siskel=ebert, girl=boy, heads=tails, ready=begin, first=last, begin=end}			{ebert=siskel, boy=girl, heads=tails, begin=end, first=last}
+{cotton=shirt, tree=violin, seed=tree, light=tree, rain=cotton}						{cotton=rain, tree=violin, seed=tree, light=tree}

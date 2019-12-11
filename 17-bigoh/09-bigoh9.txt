@@ -1,0 +1,72 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh9
+
+Give a tight bound of the nearest runtime complexity class for each of the following code fragments in Big-Oh notation, in terms of the variable N. In other words, write the code's growth rate as N grows. Write a simple expression that gives only a power of N using a caret ^ character for exponentiation, such as O(N^2) to represent O(N2) or O(log N) to represent O(log2 N). Do not write an exact calculation of the runtime such as O(2N3 + 4N + 14).
+
+
+// a)
+int sum = 0;
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        sum++;
+    }
+    for (int j = 1; j < N + 5; j++) {
+        for (int k = 1; k < 99999; k++) {
+            sum++;
+        }
+    }
+}
+println(sum);
+
+answer:  
+O(N^2)
+ 
+ 
+// b)
+Stack<Integer> stack = new Stack<Integer>();
+TreeSet<Integer> set = new TreeSet<Integer>();
+for (int i = 0; i < N; i++) {
+    stack.push(N);
+    set.add(N);
+}
+while (!stack.isEmpty()) {
+    set.remove(stack.pop());
+}
+println("done!");
+
+answer:  
+O(NlogN)
+ 
+ 
+// c)
+TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+for (int i = 0; i < N; i++) {
+    for (int j = 4; j <= 2*N + 1; j++) {
+        map.put(i, j);
+    }
+}
+Queue<Integer> queue = new LinkedList<Integer>();
+for (int k : map) {
+    queue.add(k);
+}
+println("done!");
+
+answer:  
+O(N^2logN)
+ 
+ 
+// d)
+ArrayList<Integer> list = new ArrayList<Integer>();
+HashSet<Integer> hashset = new HashSet<Integer>();
+for (int i = 4; i <= N + 7; i++) {
+    hashset.add(i);
+}
+for (int num : hashset) {
+    list.add(num);
+}
+while (!list.isEmpty()) {
+    list.remove(0);
+}
+println("done!");
+
+answer:  
+O(N^2)

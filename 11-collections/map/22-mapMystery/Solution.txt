@@ -1,0 +1,24 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/collections/map/mapMystery
+
+What is the output of the following code?
+
+TreeMap map = new TreeMap();
+map.put("K", "Schwarz");
+map.put("C", "Lee");
+map.put("M", "Sahami");
+map.put("M", "Stepp");
+map.remove("Stepp");
+map.remove("K");
+map.put("J", "Cain");
+map.remove("C, Lee");
+println(map);
+
+output
+a. {C=Lee, J=Cain, M=Stepp, M=Sahami}
+b. {J=Cain, M=Sahami}
+c. {C=Lee, J=Cain, M=Stepp}
+d. {J=Cain, C=Lee, M=Sahami, M=Stepp}  <-- correct answer
+(order shuffled)
+
+Correct Answer:
+ {C=Lee, J=Cain, M=Stepp}

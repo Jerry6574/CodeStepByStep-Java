@@ -1,0 +1,25 @@
+For each of the calls to the following recursive method below, indicate what value is returned:
+
+public String recursionMystery6(String s) {
+    if (s.length() == 0) {
+        return s;
+    } else if (s.length() % 2 == 0) {
+        String rest = s.substring(0, s.length() - 1);
+        String last = s.substring(s.length() - 1);
+        return last + recursionMystery6(rest);
+    } else {
+        String first = s.substring(0, 1);
+        String rest = s.substring(1);
+        return "(" + first + ")" + recursionMystery6(rest);
+    }
+}
+
+recursionMystery6("hi");
+Answer: i(h)
+	
+recursionMystery6("quirk");	
+Answer: (q)k(u)r(i)
+
+recursionMystery6("computer");	
+Answer: r(c)e(o)t(m)u(p)
+

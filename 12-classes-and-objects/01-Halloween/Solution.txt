@@ -1,0 +1,49 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/classes/Halloween
+
+For the program below, trace through its execution by hand to show what output 
+is produced when it runs.
+
+
+public class Halloween extends ConsoleProgram {
+    public void run() {
+        int halloweenTown = 10;
+        Skeleton bones = new Skeleton("bones");
+        Pumpkin king = new Pumpkin(halloweenTown, bones);
+        Skeleton skellington = bones;
+        skellington.setName("skellington");
+        halloweenTown = 5;
+        println(king.toString());
+    }
+}
+​
+public class Pumpkin extends ConsoleProgram {
+    private int x;
+    private Skeleton y;
+​
+    public Pumpkin(int z, Skeleton w) {
+        x = z;
+        y = w;
+    }
+​
+    public String toString() {
+        return y.getName() + " " + x;
+    }
+}
+​
+public class Skeleton extends ConsoleProgram {
+    private String name;
+​
+    public Skeleton(String n) {
+        name = n;
+    }
+​
+    public String getName() {
+        return name;
+    }
+​
+    public void setName(String newName) {
+        name = newName;
+    }
+}
+
+output: "skellington 10"

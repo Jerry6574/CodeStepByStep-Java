@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam5
+*/
+
+line1: "5 14 10"
+line2: "17 10 14"
+line3: "13 3 10"
+line4: "10 3 12 16"
+
+

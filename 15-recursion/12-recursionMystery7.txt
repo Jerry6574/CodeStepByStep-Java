@@ -1,0 +1,28 @@
+For each call to the following recursive method, write the output that is produced as it would appear on the console.
+
+public void recursionMystery7(String s) {
+    if (s.length() <= 1) {
+        print(s);
+    } else {
+        String first = s.substring(0, 1);
+        String last  = s.substring(s.length() - 1, s.length());
+        String mid   = s.substring(1, s.length() - 1);
+        if (first.compareTo(last) < 0) {
+            recursionMystery7(mid);
+            print(last + first.toUpperCase());
+        } else {
+            print("[" + first + "]");
+            recursionMystery7(mid);
+            print(last);
+        }
+    }
+}
+
+recursionMystery7("abcd");
+Answer: cBdA
+
+recursionMystery7("leonard");
+Answer: [l][o]narEd
+
+recursionMystery7("breakfast");
+Answer: [e]kfAasRtB

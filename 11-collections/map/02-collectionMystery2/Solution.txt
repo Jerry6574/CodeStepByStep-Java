@@ -1,0 +1,27 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/collections/map/collectionMystery2
+
+Write the output that is printed when the given method below is passed 
+each of the following pairs of maps as its parameter. Recall that maps 
+print in a {key1=value1, key2=value2, ..., keyN=valueN} format. 
+
+Your answer should display the right keys and values in the order 
+they are added to the resulting map.
+
+public HashMap<String, String> collectionMystery2(HashMap<String, Integer> map1, HashMap<Integer, String> map2) {
+    HashMap<String, String> result = new HashMap<String, String>();
+    for (String s1 : map1.keySet()) {
+        if (map2.containsKey(map1.get(s1))) {
+            result.put(s1, map2.get(map1.get(s1)));
+        }
+    }
+    return result;
+}
+
+map1={bar=1, baz=2, foo=3, mumble=4}, map2={1=earth, 2=wind, 3=air, 4=fire}	
+Answer: {bar=earth, baz=wind, foo=air, mumble=fire}
+
+map1={five=105, four=104, one=101, six=106, three=103, two=102}, map2={99=uno, 101=dos, 103=tres, 105=cuatro}
+Answer: {five=cuatro, one=dos, three=tres}
+	
+map1={a=42, b=9, c=7, d=15, e=11, f=24, g=7}, map2={1=four, 3=score, 5=and, 7=seven, 9=years, 11=ago}	
+Answer: {b=years, c=seven, e=ago, g=seven}

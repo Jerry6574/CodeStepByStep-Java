@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/Hogwarts
+*/
+
+line1: "snitch: x = 4004, y = 1001"
+line2: "quaffle: x = 2003, y = 1, z = 1001"
+line3: "bludger: x = 1001, y = 2001, z = 2003"
+
+
+

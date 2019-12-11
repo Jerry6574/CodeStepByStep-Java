@@ -1,0 +1,20 @@
+Given the method below, what is the output of the following call? (What is the method really doing?)
+
+public int mystery(int n) {
+    if (n < 10) {
+        return n;
+    } else {
+        int a = n / 10;
+        int b = n % 10;
+        return mystery(a + b);
+    }
+}
+
+mystery(648);
+a. 8
+b. 54
+c. 648
+d. 72
+e. 9
+
+Answer: e. 9

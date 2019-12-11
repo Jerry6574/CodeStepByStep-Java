@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam2
+*/
+
+line1: "happy and pumpkin were orange"
+line2: "orange and happy were pumpkin"
+line3: "orange and sleepy were y"
+line4: "pumpkin and x were green"
+line5: "green and pumpkinorangehappy were vampire"
+

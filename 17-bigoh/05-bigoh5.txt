@@ -1,0 +1,78 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh5
+
+// a)
+int sum = 0;
+for (int i = 1; i <= N; i++) {
+    for (int j = 1; j <= 2 * N; j++) {
+        sum++;
+    }
+}
+println(sum);
+
+answer:  
+O(N^2)
+ 
+ 
+// b)
+int sum = 0;
+for (int i = 1; i <= 100000; i++) {
+    for (int j = 1; j <= i; j++) {
+        for (int k = 1; k <= N; k++) {
+            sum++;
+        }
+    }
+}
+for (int x = 1; x <= N; x += 2) {
+    sum++;
+}
+println(sum);
+
+answer:  
+O(N)
+ 
+ 
+// c)
+ArrayList<Integer> v = new ArrayList<Integer>();
+for (int i = 1; i <= N; i++) {
+    v.add(0, i);
+}
+HashSet<Integer> s = new HashSet<Integer>();
+for (int k : v) {
+    s.add(k);
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// d)
+Queue<Integer> q = new LinkedList<Integer>();
+for (int i = 1; i <= 2*N; i++) {
+    q.add(i);
+}
+​
+TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+while (!q.isEmpty()) {
+    int k = q.remove();
+    map.set(k, -k);
+}
+println("done!");
+
+answer:  
+O(NlogN)
+ 
+ 
+// e)
+HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (int i = 1; i <= N * N; i++) {
+    map.put(i, i*i);
+}
+HashSet<Integer> set = new HashSet<Integer>();
+for (int k : map) {
+    set.add(map.get(k));
+}
+println("done!");
+
+answer:  
+O(N^2)

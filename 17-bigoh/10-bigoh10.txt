@@ -1,0 +1,68 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh10
+
+
+// a)
+int sum1 = 0;
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < i; j++) {
+        sum1++;
+    }
+    for (int j = 0; j < i; j++) {
+        sum1++;
+    }
+}
+println(sum1);
+
+answer:  
+O(N^2)
+ 
+ 
+// b)
+int sum2 = 0;
+for (int i = 0; i < 999; i++) {
+    for (int j = 0; j < i; j++) {
+        sum2++;
+    }
+}
+for (int j = 1; j < N - 2; j++) {
+    int max = 500;
+    for (int k = 1; k < max; k++) {
+        sum2++;
+    }
+}
+println(sum2);
+
+answer:  
+O(N)
+ 
+// c)
+Queue<Integer> queue = new LinkedList<Integer>();
+for (int i = 0; i <= N * N * 3; i++) {
+    queue.add(i);
+}
+HashSet<Integer> hashset = new HashSet<Integer>();
+while (!queue.isEmpty()) {
+    int num = queue.remove();
+    hashset.add(num);
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// d)
+TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+ArrayList<Integer> list = new ArrayList<Integer>();
+for (int i = 0; i < N; i++) {
+    list.add(i);
+}
+while (!list.isEmpty()) {
+    int num = list.get(list.size() - 1);
+    list.remove(list.size() - 1);
+    map.put(num, num);
+}
+println("done!");
+
+answer:  
+O(NlogN)

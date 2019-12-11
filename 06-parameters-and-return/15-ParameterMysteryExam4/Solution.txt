@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam4
+*/
+
+line1: "2 5"
+line2: "4 9"
+line3: "5 4"
+line4: "6 1"
+
+

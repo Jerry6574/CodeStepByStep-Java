@@ -1,0 +1,35 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/arrays/referenceMystery5
+
+The following program produces 4 lines of output. 
+Write each line of output below as it would appear on the console.
+
+public class ReferenceMystery5 extends ConsoleProgram {
+    public void run() {
+        int[] a = new int[2];
+        a[0] = 10;
+        a[1] = 20;
+        int b = 3;
+        int c = 5;
+​
+        mystery(a, b, c);
+        println(Arrays.toString(a) + " " + b + " " + c);
+​
+        a[1]++;
+        mystery(a, a[0], b);
+        println(Arrays.toString(a) + " " + b + " " + c);
+    }
+​
+    public void mystery(int[] a, int b, int c) {
+        b = b + c;
+        for (int i = 0; i < a.length; i++) {
+            a[i]++;
+        }
+        c = c + a[0];
+        println(Arrays.toString(a) + " " + b + " " + c);
+    }
+}
+
+line 1: 		[11, 21] 8 16	
+line 2: 		[11, 21] 3 5
+line 3: 		[12, 23] 14 15	
+line 4:			[12, 23] 3 5

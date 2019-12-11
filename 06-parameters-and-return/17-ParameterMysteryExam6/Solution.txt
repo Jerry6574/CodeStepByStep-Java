@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam6
+*/
+
+line1: "peacock in the study with the dagger"
+line2: "study in the peacock with the mustard"
+line3: "lounge in the mustard with the pipe"
+line4: "ballroom in the dagger with the lounge"
+
+

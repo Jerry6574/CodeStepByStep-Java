@@ -1,0 +1,7 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ReturnMystery1
+*/
+
+line1: 12
+line2: 2
+line3: 16

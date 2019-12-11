@@ -1,0 +1,12 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysterySection2
+*/
+
+line1: a = 137
+line2: a = 42
+line3: a = 137
+line4: b = 42
+line5: d = 137
+line6: a = 7
+line7: d = 35
+line8: a = 5

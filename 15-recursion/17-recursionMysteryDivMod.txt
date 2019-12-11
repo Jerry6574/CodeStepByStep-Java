@@ -1,0 +1,29 @@
+For each call to the following recursive method, write the value that would be returned.
+
+public int recursionMysteryDivMod(int n) {
+    if (n < 0) {
+        return recursionMysteryDivMod(-n);
+    } else if (n < 10) {
+        return n;
+    } else {
+        return n % 10 + recursionMysteryDivMod(n / 10);
+    }
+}
+
+(Side note: What is the method really doing?)
+Answer: returns the digit sum
+
+recursionMysteryDivMod(8)
+Answer: 8
+
+recursionMysteryDivMod(74)
+Answer: 11
+
+recursionMysteryDivMod(-513)
+Answer: 9
+
+recursionMysteryDivMod(3052)
+Answer: 10
+
+recursionMysteryDivMod(82534)
+Answer: 22

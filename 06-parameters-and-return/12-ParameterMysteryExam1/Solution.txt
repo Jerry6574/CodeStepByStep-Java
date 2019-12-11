@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam1
+*/
+
+line1: tyler and tv like java
+line2: java and tyler like tv
+line3: tv and donnie like rugby
+line4: hamburger and x like tyler
+line5: hamburger and java like hamburger
+

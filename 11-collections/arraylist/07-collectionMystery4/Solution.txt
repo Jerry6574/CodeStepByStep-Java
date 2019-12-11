@@ -1,0 +1,17 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/collections/arraylist/collectionMystery4
+
+Write the output produced by the following method when passed each of the following lists:
+
+public void collectionMystery4(ArrayList<Integer> v) {
+    for (int i = 1; i < v.size(); i += 2) {
+        if (v.get(i - 1) >= v.get(i)) {
+            v.remove(i);
+            v.add(0, 0);
+        }
+    }
+    println(v);
+}
+
+{10, 20, 10, 5}							[0, 10, 20, 10]
+{8, 2, 9, 7, -1, 55}					[0, 0, 8, 9, -1, 55]
+{0, 16, 9, 1, 64, 25, 25, 14, 0}		[0, 0, 0, 0, 16, 9, 64, 25, 0]

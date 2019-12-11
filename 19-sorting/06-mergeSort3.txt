@@ -1,0 +1,16 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/sorting/mergeSort3
+
+Suppose we are doing selection and merge sorts on the list below, and that we are operating on a computer where essentially every operation is cost-free (takes 0 time to execute) except for the act of assigning a value into a slot of the list passed in (such as setting V1.set(0, 42);), which requires 100 units of time. (Assigning a value to a normal int variable, or into any other list or collection, requires no time in this hypothetical model.) How long does each algorithm take to run for this particular data under these particular conditions? Which sorting algorithm requires less time to run? Assume that selection does not perform a swap if not necessary, that is, if the two indexes of interest are the same.
+
+// index    0   1   2   3   4   5   6   7
+// values {15, 56, 24,  5, 39, -4, 27, 10}
+ArrayList<Integer> v1 = new ArrayList<Integer>(Arrays.asList(15, 56, 24, 5, 39, -4, 27, 10));
+selectionSort(v1);
+​
+ArrayList<Integer> v2 = new ArrayList<Integer>(Arrays.asList(15, 56, 24, 5, 39, -4, 27, 10));
+mergeSort(v2);
+
+selection sort runtime	
+1400
+ merge sort runtime	
+800

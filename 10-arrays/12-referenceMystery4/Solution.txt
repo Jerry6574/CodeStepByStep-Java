@@ -1,0 +1,31 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/arrays/referenceMystery4
+
+The following program produces 4 lines of output. 
+Write each line of output below as it would appear on the console.
+
+public class ReferenceMystery4 extends ConsoleProgram {
+    public void run() {
+        int[] a = {2, 0, 1};
+        int b = 3;
+        mystery(a, b, a[0]);
+        println(Arrays.toString(a) + " " + b);
+​
+        b = a[0] + a[1] + a[2];
+        mystery(a, a[1], a[2]);
+        println(Arrays.toString(a) + " " + b);
+    }
+​
+    public void mystery(int[] a, int b, int c) {
+        for (int i = 0; i < a.length; i++) {
+            a[i] = a[i] * 2;
+        }
+        b++;
+        c--;
+        println(Arrays.toString(a) + " " + b + " " + c);
+    }
+}
+
+line 1: 		[4, 0, 2] 4 1
+line 2: 		[4, 0, 2] 3
+line 3: 		[8, 0, 4] 1 1
+line 4: 		[8, 0, 4] 6

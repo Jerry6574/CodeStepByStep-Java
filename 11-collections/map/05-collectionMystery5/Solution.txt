@@ -1,0 +1,38 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/collections/map/collectionMystery5
+
+Write the output that is printed when the given method below is 
+passed each of the following maps and lists as its parameters. 
+Recall that maps print in a {key1=value1, key2=value2, ..., keyN=valueN} format.
+
+Though hash maps usually have unpredictable ordering, 
+for this problem, you should assume that when looping over the map 
+or printing a map, it visits the keys in the order that they were 
+added to the map or the order they are declared below. 
+If a map calls put() on a key that already exists, 
+it retains its current position in the ordering.
+
+public void collectionMystery5(ArrayList<String> list1, ArrayList<String> list2) {
+    HashMap<String, String> result = new HashMap<String, String>();
+​
+    for (int i = 0; i < list1.size(); i++) {
+        String s1 = list1.get(i);
+        String s2 = list2.get(i);
+​
+        if (!result.containsKey(s1)) {
+            result.put(s1, s2);
+        } else if (!result.containsKey(s2)) {
+            result.put(s2, s1);
+        } else {
+            result.put(s1 + s2, s1);
+        }
+    }
+    println(result);
+}
+
+list1 = ["cat", "cat",  "long", "long", "longcat"]
+list2 = ["mew", "purr", "cat",  "cat",  "purr"]	
+Answer: {cat=mew, purr=cat, long=cat, longcat=long, longcatpurr=longcat}
+
+list1 = ["a", "b", "a", "ab", "ab", "y",   "abb"]
+list2 = ["b", "c", "b", "b",  "c",  "abb", "y"  ]	
+Answer: {a=b, b=c, ab=a, abb=ab, c=ab, y=abb, abby=abb}

@@ -1,0 +1,7 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysterySection1
+*/
+
+line1: "-2 + 4 = 7"
+line2: "4 + -2 = 3"
+line3: "2 + 11 = 5"

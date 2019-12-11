@@ -1,0 +1,29 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/arrays/referenceMystery3
+
+The following program produces 4 lines of output. 
+Write each line of output below as it would appear on the console.
+
+public class ReferenceMystery3 extends ConsoleProgram {
+    public void run() {
+        int x = 1;
+        int[] a = new int[2];
+        mystery(x, a);
+        println(x + " " + Arrays.toString(a));
+​
+        x--;
+        a[1] = a.length;
+        mystery(x, a);
+        println(x + " " + Arrays.toString(a));
+    }
+​
+    public void mystery(int x, int[] a) {
+        a[x]++;
+        x++;
+        println(x + " " + Arrays.toString(a));
+    }
+}
+
+line 1:			2 [0, 1]
+line 2:			1 [0, 1]
+line 3: 		1 [1, 2]
+line 4: 		0 [1, 2]

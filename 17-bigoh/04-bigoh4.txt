@@ -1,0 +1,77 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh4
+
+
+// a)
+int sum = 0;
+for (int i = 0; i < N; i++) {
+    sum++;
+}
+for (int i = 100*N; i >= 0; i--) {
+    sum++;
+}
+println(sum);
+
+answer:  
+O(N)
+ 
+ 
+// b)
+int sum = 0;
+for (int i = 1; i < N - 2; i++) {
+    for (int j = 0; j < N * 3; j += 2) {
+        for (int k = 0; k < 1000; k++) {
+            sum++;
+        }
+    }
+}
+println(sum);
+
+answer:  
+O(N^2)
+ 
+ 
+// c)
+ArrayList<Integer> v = new ArrayList<Integer>();
+for (int i = 0; i < N; i++) {
+    v.add(i);
+}
+while (!v.isEmpty()) {
+    v.remove(0);
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// d)
+TreeSet<Integer> set = new TreeSet<Integer>();
+for (int i = 0; i < N/2; i++) {
+    set.add(i);
+}
+Stack<Integer> stack = new Stack<Integer>();
+for (int i = 0; i < N/2; i++) {
+    set.remove(i);
+    stack.push(i);
+}
+​
+println("done!");
+
+answer:  
+O(NlogN)
+ 
+ 
+// e)
+Queue<Integer> queue = new LinkedList<Integer>();
+for (int i = 1; i <= N; i++) {
+    queue.add(i * i);
+}
+HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+while (!queue.isEmpty()) {
+    int k = queue.remove();
+    map.put(k, N * N);
+}
+println("done!");
+
+answer:  
+O(N)

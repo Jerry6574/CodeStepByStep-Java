@@ -1,0 +1,10 @@
+/*
+Solution to https://www.codestepbystep.com/problem/view/java/parameters/ParameterMysteryExam3
+*/
+
+line1: "3 + 5 = 1"
+line2: "10 + 3 = 5"
+line3: "7 + 4 = 7"
+line4: "2 + 14 = 2"
+
+

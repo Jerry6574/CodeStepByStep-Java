@@ -1,0 +1,76 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh8
+
+// a)
+int sum = 0;
+for (int i = 0; i < 1000; i++) {
+    for (int j = 1; j < N * 2; j++) {
+        sum++;
+    }
+    for (int k = 0; k < i; k++) {
+        sum++;
+    }
+}
+println(sum);
+
+answer:  
+O(N)
+
+ 
+// b)
+ArrayList<Integer> v = new ArrayList<Integer>();
+for (int i = 0; i < N; i++) {
+    v.add(0, i);
+}
+while (!v.isEmpty()) {
+    v.remove(0);
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// c)
+Queue<Integer> queue = new LinkedList<Integer>();
+for (int i = 1; i <= N; i++) {
+    queue.add(i * i);
+}
+TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+while (!queue.isEmpty()) {
+    int k = queue.remove();
+    map.put(k, N * N);
+}
+println("done!");
+answer:  
+O(NlogN)
+ 
+// d)
+HashSet<Integer> set = new HashSet<Integer>();
+for (int i = 0; i < N; i++) {
+    set.add(i);
+}
+Stack<Integer> stack = new Stack<Integer>();
+for (int i = 0; i < N * N; i++) {
+    stack.push(i);
+}
+for (int i = 0; i < N; i++) {
+    set.remove(i);
+    stack.pop();
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// e)
+ArrayList<Integer> v = new ArrayList<Integer>();
+for (int i = 1; i <= 1000000000; i++) {
+    v.add(i);
+}
+v.clear();
+println("done!");
+
+
+answer:  
+O(1)

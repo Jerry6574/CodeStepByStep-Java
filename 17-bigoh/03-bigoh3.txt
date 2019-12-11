@@ -1,0 +1,77 @@
+Solution to: https://www.codestepbystep.com/problem/view/java/bigoh/bigoh3
+
+Give a tight bound of the nearest runtime complexity class for each of the following code fragments in Big-Oh notation, in terms of the variable N. In other words, write the code's growth rate as N grows. Write a simple expression that gives only a power of N using a caret ^ character for exponentiation, such as O(N^2) to represent O(N2) or O(log N) to represent O(log2 N). Do not write an exact calculation of the runtime such as O(2N3 + 4N + 14).
+
+
+// a)
+HashSet<Integer> set1 = new HashSet<Integer>();
+for (int i = 0; i < N; i++) {
+    set1.add(i);
+}
+TreeSet<Integer> set2 = new TreeSet<Integer>();
+for (int n : set1) {
+    set2.add(n);
+}
+println("done!");
+answer:  
+O(NlogN)
+ 
+ 
+// b)
+ArrayList<Integer> list = new ArrayList<Integer>();
+for (int i = 0; i < N; i++) {
+    list.add(0, i*i);
+}
+TreeSet<Integer> set = new TreeSet<Integer>();
+for (int k : list) {
+    set.add(k);
+}
+println("done!");
+
+answer:  
+O(N^2)
+ 
+ 
+// c)
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+for (int i = 0; i < N; i += 2) {
+    list1.add(i);
+}
+ArrayList<Integer> list2 = new ArrayList<Integer>();
+for (int i = 0; i < N; i++) {
+    list2.add(0, list1.get(0));
+    list1.remove(0);
+}
+println("done!");
+answer:  
+O(N^2)
+ 
+ 
+// d)
+int sum = 0;
+for (int i = 0; i < N * 2; i++) {
+    for (int j = 0; j < 100; j++) {
+        for (int k = 0; k < j*j*j; k++) {
+            sum++;
+        }
+    }
+}
+println(sum);
+
+answer:  
+O(N)
+ 
+ 
+// e)
+int sum = 0;
+for (int i = 0; i < N * 2; i++) {
+    for (int j = 0; j < i/2; j++) {
+        for (int k = 0; k < N*N; k++) {
+            sum++;
+        }
+    }
+}
+println(sum);
+
+answer:  
+O(N^4)
